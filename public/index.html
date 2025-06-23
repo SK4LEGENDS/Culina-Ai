@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Culina-AI | Recipe Generator</title>
+    <link rel="stylesheet" href="/public/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">Culina-AI</h1>
+        <nav class="nav">
+          <a href="/public/index.html">Home</a>
+          <a href="/public/recipie.html">Recipes</a>
+          <a href="/public/landing.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>AI-Powered Recipe Magic</h2>
+        <p>
+          Type a dish name or list your ingredients — Culina-AI will cook up the
+          recipe for you!
+        </p>
+      </section>
+
+      <section class="input-card">
+        <textarea
+          id="user-input"
+          placeholder="E.g. chicken, garlic, tomatoes... or 'Pasta Alfredo'"
+        ></textarea>
+        <button id="generate-btn">Generate Recipe</button>
+
+        <!-- Status message right below -->
+        <div id="status-message" class="status-message hidden">
+          <span class="dot-flashing"></span> Culina-AI is mixing up your magic
+          recipe... 🍳✨
+        </div>
+      </section>
+
+      <section id="output-section" class="output-card hidden">
+        <h3>Your Recipe</h3>
+        <pre id="recipe-output"></pre>
+        <div class="btn-group">
+          <button id="download-btn">Download</button>
+        </div>
+      </section>
+
+      <section class="history-section">
+        <h3>Previous Recipes</h3>
+        <ul id="history-list"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Culina-AI. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/public/history.js"></script>
+    <script src="/public/download.js"></script>
+    <script src="/public/script.js"></script>
+  </body>
+</html>

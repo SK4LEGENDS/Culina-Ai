@@ -1,0 +1,555 @@
+/* ========================
+   🌱 ROOT VARIABLES
+========================= */
+:root {
+  --primary-color: #4f46e5; /* Indigo 600 */
+  --primary-hover: #4338ca;
+  --accent-color: #00c352;
+  --success-color: #22c55e;
+  --info-color: #009f9f;
+  --warning-color: #ffc13b;
+
+  --bg-color: #f2fbf5;
+  --card-bg: #e9f9f1;
+  --alt-bg: #d2f3e3;
+  --border-color: #b8e9d2;
+
+  --text-color: #1f2937;
+  --secondary-text: #445964;
+  --muted-text: #7b8a9b;
+
+  --font-stack: "Segoe UI", "Poppins", Roboto, Helvetica, sans-serif;
+
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  --header-gradient: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--info-color)
+  );
+  --card-gradient: linear-gradient(to bottom right, #ffffff, #e9f9f1);
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  --transition-default: 0.3s ease-in-out;
+}
+
+/* ========================
+   🔄 RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-stack);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding-top: var(--space-sm);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* ========================
+   📦 LAYOUT
+========================= */
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: var(--space-md);
+}
+
+/* ========================
+   🔝 HEADER
+========================= */
+.header {
+  background: var(--header-gradient);
+  color: white;
+  padding: 0.5rem 0; /* Reduced padding for smaller header */
+  box-shadow: var(--shadow-soft);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-md); /* Side spacing */
+}
+
+/* Culina AI Logo - Now Left, Clean & Official */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* Enterprise Nav Style */
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color var(--transition-default);
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-color);
+  bottom: 0;
+  left: 0;
+  transition: width var(--transition-default);
+}
+
+.nav a:hover {
+  color: var(--accent-color);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* ========================
+   🎯 HERO SECTION
+========================= */
+.hero {
+  margin: var(--space-lg) 0 var(--space-md);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: var(--space-sm);
+  color: var(--primary-color);
+}
+
+.hero p {
+  color: var(--secondary-text);
+}
+
+/* ========================
+   ✍️ INPUT SECTION
+========================= */
+.input-card {
+  background: var(--card-bg);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--space-lg);
+}
+
+textarea {
+  width: 100%;
+  height: 130px;
+  padding: var(--space-sm);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-stack);
+}
+
+/* ========================
+   🔘 BUTTONS
+========================= */
+button {
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-default);
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ========================
+   📤 OUTPUT SECTION
+========================= */
+.output-card {
+  background-color: var(--alt-bg);
+  padding: var(--space-md);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: var(--space-lg);
+}
+
+.output-card h3 {
+  margin-bottom: var(--space-sm);
+}
+
+pre {
+  background-color: #fffbe6;
+  padding: var(--space-sm);
+  border-radius: var(--radius);
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ========================
+   📜 HISTORY
+========================= */
+.history-section {
+  padding: var(--space-md);
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-lg);
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-sm);
+}
+
+#history-list li {
+  padding: var(--space-xs);
+  background-color: var(--alt-bg);
+  border: 1px solid var(--border-color);
+  margin-bottom: var(--space-xs);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color var(--transition-default);
+}
+
+#history-list li:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* ========================
+   🔻 FOOTER
+========================= */
+.footer {
+  background: var(--header-gradient);
+  color: white;
+  padding: 0.5rem 0;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ← cleaner for one child */
+  padding: 0 var(--space-md);
+  font-size: 0.9rem;
+  font-family: var(--font-stack);
+}
+
+/* ========================
+   🛠️ UTILITIES
+========================= */
+.hidden {
+  display: none;
+}
+
+.btn-group {
+  margin-top: var(--space-sm);
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* ========================
+   ✨ HERO SECTION (Landing)
+========================= */
+.hero {
+  margin: var(--space-lg) 0 var(--space-md);
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.hero h2 {
+  font-size: 2.4rem;
+  color: var(--primary-color);
+  margin-bottom: var(--space-sm);
+}
+
+.hero p {
+  color: var(--secondary-text);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+}
+
+/* ========================
+   💡 FEATURES SECTION
+========================= */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.feature-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-xs);
+  color: var(--primary-color);
+}
+
+.feature-card p {
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+}
+
+/* ========================
+   🎯 CTA SECTION
+========================= */
+.cta {
+  background: var(--card-gradient);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--space-lg);
+}
+
+.cta h3 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-bottom: var(--space-sm);
+}
+
+.cta p {
+  font-size: 1rem;
+  color: var(--secondary-text);
+  margin-bottom: var(--space-sm);
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--accent-color);
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--transition-default), transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--success-color);
+  transform: translateY(-2px);
+}
+
+.status-message {
+  font-weight: 500;
+  margin-top: 10px;
+  text-align: center;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Spinner Animation (Dot Flashing) */
+.dot-flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ff7e5f;
+  color: #ff7e5f;
+  animation: dotFlashing 1s infinite linear alternate;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #ff7e5f;
+  }
+  50% {
+    background-color: #ffe97f;
+  }
+  100% {
+    background-color: #ff7e5f;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.status-message {
+  font-weight: 500;
+  margin-top: 10px;
+  text-align: center;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot-flashing {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ff7e5f;
+  animation: dotFlashing 1s infinite linear alternate;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #ff7e5f;
+  }
+  50% {
+    background-color: #ffe97f;
+  }
+  100% {
+    background-color: #ff7e5f;
+  }
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.history-title {
+  flex-grow: 1;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #c0392b;
+  transition: color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #e74c3c;
+}
+
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+/* Filter Section */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.filters label {
+  font-weight: 600;
+  color: var(--secondary-text);
+}
+
+.filters select {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: var(--transition-default);
+}
+
+.filters select:hover {
+  border-color: var(--primary-hover);
+}
+
+/* Recipe List Section */
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: var(--space-lg);
+}
+
+/* Recipe Card */
+.recipe-card {
+  background: var(--card-gradient);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: var(--space-md);
+  transition: transform var(--transition-default);
+  cursor: pointer;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Content */
+.recipe-card h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+.recipe-card p {
+  color: var(--muted-text);
+  margin: var(--space-xs) 0 0;
+  font-size: 0.95rem;
+}

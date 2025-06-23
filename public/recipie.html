@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Culina-AI | Recipe Generator</title>
+    <link rel="stylesheet" href="/public/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">Culina-AI</h1>
+        <nav class="nav">
+          <a href="/public/index.html">Home</a>
+          <a href="/public/recipie.html">Recipes</a>
+          <a href="/public/landing.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Filter Section -->
+      <section class="filters">
+        <!-- Nationality Filter -->
+        <label for="nationality-select">Nationality:</label>
+        <select id="nationality-select">
+          <option value="all">All</option>
+          <option value="Indian">Indian</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Mexican">Mexican</option>
+          <option value="French">French</option>
+          <option value="American">American</option>
+        </select>
+
+        <!-- Meal Time Filter -->
+        <label for="meal-time-select">Meal:</label>
+        <select id="meal-time-select">
+          <option value="all">All</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="snack">Snack</option>
+          <option value="dinner">Dinner</option>
+        </select>
+
+        <!-- Dish Type Filter -->
+        <label for="dish-type-select">Dish Type:</label>
+        <select id="dish-type-select">
+          <option value="all">All</option>
+          <option value="main">Main Dish</option>
+          <option value="side">Side Dish</option>
+          <option value="dessert">Dessert</option>
+          <option value="beverage">Beverage</option>
+        </select>
+
+        <!-- Occasion Filter -->
+        <label for="occasion-select">Occasion:</label>
+        <select id="occasion-select">
+          <option value="all">All</option>
+          <option value="everyday">Everyday</option>
+          <option value="festive">Festive</option>
+          <option value="party">Party</option>
+          <option value="romantic">Romantic</option>
+        </select>
+      </section>
+
+      <!-- Recipe List Section -->
+      <section id="recipe-list" class="recipe-list">
+        <!-- Recipe cards will be inserted here -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Culina-AI. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- ✅ Correct script -->
+    <script src="/public/script.js"></script>
+    <script src="/public/recipie.js"></script>
+  </body>
+</html>
