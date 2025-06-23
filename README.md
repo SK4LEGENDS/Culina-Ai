@@ -35,6 +35,11 @@ This project presents a clean UI that allows filtering recipes by nationality, m
 ### 🏠 Homepage
 ![Homepage](images/landing.png)
 
-### 🎯 Filters in Action
+### 🍽️ Filters in Action
 ![Filters in Action](images/recipie.png)
+
+
+### 🎯 Recipe Generation
+![Recipe Generation UI](images/recipie1.png)
+![Recipe Generation UI](images/recipie2.png)
 
