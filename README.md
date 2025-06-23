@@ -32,3 +32,9 @@ This project presents a clean UI that allows filtering recipes by nationality, m
 ## 📸 Screenshots
 
 
+### 🏠 Homepage
+![Homepage](images/landing.png)
+
+### 🎯 Filters in Action
+![Filters in Action](images/recipie.png)
+
